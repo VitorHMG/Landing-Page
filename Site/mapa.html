@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AtlasMap - Mapeamento</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.css" rel="stylesheet" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.15.0/mapbox-gl.js"></script>
+  </head>
+
+  <body>
+    <header class="home-bar">
+      <img class="logo-top" src="IMG/AtlasMap.png" alt="AtlasMap Logo" />
+      <nav class="main-nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav-link home-top">Página Inicial</a>
+        <a href="mapa.html" class="nav-link map-top">Mapeamento</a>
+        <a href="#" class="nav-link map-top" id="add-project-link">Adicionar Projeto</a>
+      </nav>
+      <button class="profile-trigger" type="button" aria-label="Abrir perfil" aria-expanded="false">
+        <span class="profile-icon" aria-hidden="true">👤</span>
+      </button>
+    </header>
+
+    <aside class="profile-panel" id="profile-panel" aria-hidden="true">
+      <div class="profile-panel-header">
+        <div>
+          <span class="profile-kicker">AtlasMap</span>
+          <h2>Perfil do Usuário</h2>
+        </div>
+        <button class="profile-close" type="button" aria-label="Fechar perfil">×</button>
+      </div>
+
+      <div class="profile-user-card">
+        <div class="profile-avatar">AM</div>
+        <div>
+          <strong>Usuário AtlasMap</strong>
+          <span>usuario@atlasmap.com</span>
+        </div>
+      </div>
+
+      <div class="profile-tabs" role="tablist">
+        <button class="profile-tab active" type="button" data-tab="my-projects">Meus Projetos</button>
+        <button class="profile-tab" type="button" data-tab="liked-projects">Projetos Curtidos</button>
+      </div>
+
+      <section class="profile-section active" id="my-projects" data-panel="my-projects">
+        <div class="profile-list" id="my-projects-list"></div>
+        <button class="add-project-profile" type="button" id="profile-add-project">Adicionar Novo Projeto</button>
+      </section>
+
+      <section class="profile-section" id="liked-projects" data-panel="liked-projects">
+        <div class="profile-list" id="liked-projects-list"></div>
+      </section>
+    </aside>
+    <div class="panel-overlay" id="panel-overlay" aria-hidden="true"></div>
+
+    <section class="add-project-screen" id="add-project-screen" aria-hidden="true">
+      <form class="add-project-form" id="add-project-form">
+        <h2 id="project-form-title">Adicionar Projeto</h2>
+        <input type="hidden" id="project-edit-id" name="project-edit-id">
+
+        <label for="project-name">Nome do projeto</label>
+        <input type="text" id="project-name" name="project-name" required>
+
+        <label for="project-owner">Proprietário</label>
+        <input type="text" id="project-owner" name="project-owner" required>
+
+        <label for="project-description">Descrição</label>
+        <textarea id="project-description" name="project-description" rows="4" required></textarea>
+
+        <label for="project-coordinates">Coordenadas</label>
+        <input type="text" id="project-coordinates" name="project-coordinates" placeholder="Ex: -46.6333, -23.5505" required>
+
+        <button type="submit" class="save-btn" id="project-submit-btn">Salvar</button>
+      </form>
+    </section>
+
+    <main class="map-section">
+      <h2>Mapeamento de Projetos</h2>
+      <p>Explore os projetos cadastrados abaixo:</p>
+      <div id="map"></div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

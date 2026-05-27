@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtlasMap - Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-body">
+    <main class="auth-shell">
+        <section class="auth-brand">
+            <h1>AtlasMap</h1>
+            <p>Entre para acompanhar, criar e curtir projetos de energia e sustentabilidade.</p>
+        </section>
+
+        <section class="auth-card" id="auth-card">
+            <div class="auth-panels">
+                <form class="auth-form login-form active" id="login-form">
+                    <span class="auth-kicker">Bem-vindo de volta</span>
+                    <h2>Entrar</h2>
+
+                    <label for="login-email">E-mail</label>
+                    <input type="email" id="login-email" required>
+
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" required>
+
+                    <button class="auth-submit" type="submit">Entrar</button>
+
+                    <div class="social-auth">
+                        <button type="button"><span>G</span> Entrar com o Google</button>
+                        <button type="button"><span>⌘</span> Entrar com o GitHub</button>
+                    </div>
+
+                    <p class="auth-switch">Não tem uma conta? <button type="button" id="show-signup">Cadastre-se</button></p>
+                </form>
+
+                <form class="auth-form signup-form" id="signup-form">
+                    <span class="auth-kicker">Comece agora</span>
+                    <h2>Criar conta</h2>
+
+                    <label for="signup-name">Nome Completo</label>
+                    <input type="text" id="signup-name" required>
+
+                    <label for="signup-email">E-mail</label>
+                    <input type="email" id="signup-email" required>
+
+                    <label for="signup-phone">Número de Telefone</label>
+                    <input type="tel" id="signup-phone" required>
+
+                    <label for="signup-password">Senha</label>
+                    <input type="password" id="signup-password" required>
+
+                    <button class="auth-submit" type="submit">Cadastrar</button>
+                    <p class="auth-switch">Já tem uma conta? <button type="button" id="show-login">Entrar</button></p>
+                </form>
+            </div>
+            <p class="auth-message" id="auth-message" aria-live="polite"></p>
+        </section>
+    </main>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

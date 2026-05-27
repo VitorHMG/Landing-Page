@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Banner digital interativo do AtlasMap, plataforma web para cadastro, mapeamento e acompanhamento de projetos sustentáveis." />
+  <title>AtlasMap | Banner Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="#inicio" class="logo">AtlasMap</a>
+    <nav class="menu" id="menu">
+      <a href="#problema">Problema</a>
+      <a href="#solucao">Solução</a>
+      <a href="#demo">Demonstração</a>
+      <a href="#equipe">Equipe</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content reveal">
+        <span class="tag">UPX • Banner Digital • Protótipo Web</span>
+        <h1>AtlasMap</h1>
+        <p class="subtitle">Uma plataforma para cadastrar, visualizar e acompanhar projetos sustentáveis em um mapa interativo, aproximando tecnologia, impacto ambiental e tomada de decisão.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#demo" target="_blank">Ver demonstração</a>
+          <a class="btn secondary" href="/Site/login.html" target="_blank">Abrir protótipo</a>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="mockup-window">
+          <div class="mockup-bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="mockup-body">
+            <div class="mockup-title">Preview do protótipo</div>
+            <div class="mockup-screen">
+              <img src="assets/imagens/Print-inicial.png" alt="Tela inicial do AtlasMap" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="metrics reveal" aria-label="Indicadores do projeto">
+      <article>
+        <strong>Mapa</strong>
+        <span>Projetos organizados geograficamente</span>
+      </article>
+      <article>
+        <strong>Perfil</strong>
+        <span>Projetos próprios e curtidos</span>
+      </article>
+      <article>
+        <strong>Auth</strong>
+        <span>Fluxo simulado de login e cadastro</span>
+      </article>
+      <article>
+        <strong>Web</strong>
+        <span>Interface responsiva para apresentação</span>
+      </article>
+    </section>
+
+    <section class="section split" id="problema">
+      <div class="section-text reveal">
+        <span class="section-label">Contexto</span>
+        <h2>Problema identificado</h2>
+        <p>Projetos ambientais e energéticos costumam ficar espalhados em documentos, planilhas ou apresentações isoladas, dificultando a visualização territorial, a comparação entre iniciativas e o acompanhamento por pessoas interessadas.</p>
+        <p>Essa falta de centralização reduz a clareza sobre onde os projetos acontecem, quem é responsável por eles e quais iniciativas merecem acompanhamento, apoio ou divulgação.</p>
+      </div>
+      <div class="highlight-box reveal">
+        <h3>Dor principal</h3>
+        <p>Usuários precisam de uma forma simples de encontrar, registrar e favoritar projetos sustentáveis sem depender de arquivos soltos ou buscas manuais.</p>
+      </div>
+    </section>
+
+    <section class="section" id="solucao">
+      <div class="section-heading reveal">
+        <span class="section-label">Proposta</span>
+        <h2>Solução desenvolvida</h2>
+        <p>O AtlasMap reúne cadastro, visualização em mapa, cards de projetos, perfil de usuário e favoritos em uma única experiência web.</p>
+      </div>
+
+      <div class="cards-grid">
+        <article class="card reveal">
+          <div class="icon">01</div>
+          <h3>Cadastro de projetos</h3>
+          <p>Permite registrar nome, responsável, descrição e coordenadas para exibir novas iniciativas no mapa.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">02</div>
+          <h3>Mapeamento interativo</h3>
+          <p>Exibe os projetos em uma interface geográfica com marcadores e informações resumidas.</p>
+        </article>
+        <article class="card reveal">
+          <div class="icon">03</div>
+          <h3>Perfil e favoritos</h3>
+          <p>Organiza projetos criados pelo usuário, edição de registros e lista de projetos curtidos.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section dark" id="tecnologias">
+      <div class="section-heading reveal">
+        <span class="section-label">Implementação</span>
+        <h2>Tecnologias utilizadas</h2>
+        <p>O MVP foi construído como aplicação web estática, com persistência simulada no navegador para apoiar a apresentação.</p>
+      </div>
+      <div class="tech-list reveal">
+        <span>HTML5</span>
+        <span>CSS3</span>
+        <span>JavaScript</span>
+        <span>LocalStorage</span>
+        <span>Mapbox GL JS</span>
+        <span>GitHub Pages</span>
+      </div>
+    </section>
+
+    <section class="section split" id="arquitetura">
+      <div class="section-text reveal">
+        <span class="section-label">Arquitetura</span>
+        <h2>Como a solução funciona</h2>
+        <p>A interface web concentra as telas de autenticação, página inicial, perfil e mapa. Os projetos criados e curtidos são armazenados no navegador por meio de LocalStorage, enquanto o mapa utiliza Mapbox GL JS para renderização geográfica.</p>
+      </div>
+      <div class="diagram reveal" aria-label="Fluxo da solução">
+        <div>Usuário</div>
+        <span>→</span>
+        <div>Interface AtlasMap</div>
+        <span>→</span>
+        <div>LocalStorage</div>
+        <span>→</span>
+        <div>Mapa Mapbox</div>
+      </div>
+    </section>
+
+    <section class="section" id="demo">
+      <div class="section-heading reveal">
+        <span class="section-label">Demonstração</span>
+        <h2>Apresentação do MVP</h2>
+        <p>O protótipo possui login e cadastro simulados, cards com curtidas, painel de perfil, criação e edição de projetos e página de mapeamento.</p>
+      </div>
+      <div class="demo-box reveal">
+        <img src="assets/imagens/Print-inicial.png" alt="Página inicial do AtlasMap com cards de projetos" />
+        <div>
+          <h3>Fluxo principal</h3>
+          <p>Acesse o protótipo, faça login com qualquer e-mail e senha, curta projetos, abra o perfil e cadastre uma nova iniciativa no mapa.</p>
+          <div class="demo-actions">
+            <a class="btn primary" href="/Site/login.html" target="_blank">Testar login</a>
+            <a class="btn secondary" href="/Site/mapa.html" target="_blank">Abrir mapa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section split" id="ods">
+      <div class="section-text reveal">
+        <span class="section-label">Impacto</span>
+        <h2>Resultados esperados e ODS</h2>
+        <p>O AtlasMap apoia a divulgação e organização de iniciativas sustentáveis, facilitando o acesso a informações sobre projetos de energia, meio ambiente e impacto social.</p>
+      </div>
+      <div class="ods-card reveal">
+        <strong>ODS 9</strong>
+        <p>Indústria, Inovação e Infraestrutura</p>
+        <small>Também se conecta a iniciativas de energia limpa, cidades sustentáveis e ação climática.</small>
+      </div>
+    </section>
+
+    <section class="section" id="equipe">
+      <div class="section-heading reveal">
+        <span class="section-label">Equipe</span>
+        <h2>Integrantes do projeto</h2>
+      </div>
+      <div class="team-grid">
+        <article class="team-card reveal">
+          <img class="avatar" src="assets/imagens/Equipe/Erick.jpeg" alt="Erick Lucas Oliveira" />
+          <h3>Erick Lucas Oliveira</h3>
+          <p>Desenvolvedor front-end e back-end.</p>
+        </article>
+        <article class="team-card reveal">
+          <img class="avatar" src="assets/imagens/Equipe/Giovanni.jpeg" alt="Giovanni Leandro Lati" />
+          <h3>Giovanni Leandro Lati</h3>
+          <p>Desenvolvedor back-end e integração com a API.</p>
+        </article>
+        <article class="team-card reveal">
+          <img class="avatar" src="assets/imagens/Equipe/Matheus.jpeg" alt="Matheus Carvalho" />
+          <h3>Matheus Coelho</h3>
+          <p>Criação do banco de dados e integração dos projetos.</p>
+        </article>
+        <article class="team-card reveal">
+          <img class="avatar" src="assets/imagens/Equipe/Rodrigo.jpeg" alt="Rodrigo Kitazono" />
+          <h3>Rodrigo Kitazono</h3>
+          <p>Líder da equipe, Project Owner.</p>
+        </article>
+        <article class="team-card reveal">
+          <img class="avatar" src="assets/imagens/Equipe/Vitor.jpeg" alt="Vitor Hugo Magalhães" />
+          <h3>Vitor Hugo Magalhães</h3>
+          <p>Prototipação e desenvolvimento front-end.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="acesso">
+      <div class="cta-content reveal">
+        <h2>Acesse durante a apresentação</h2>
+        <p>Use o QR Code para abrir esta landing page no celular e navegar até o protótipo funcional do AtlasMap.</p>
+      </div>
+      <div class="qr-card reveal">
+        <img id="qrCode" alt="QR Code da landing page" />
+        <small>QR Code gerado automaticamente com o endereço atual da página.</small>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>UniFacens • Análise e Desenvolvimento de Sistemas • 03/2026</p>
+    <p>AtlasMap: mapeamento digital de projetos sustentáveis.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
