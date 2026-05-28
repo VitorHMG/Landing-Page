@@ -428,9 +428,18 @@ img.avatar {
   max-width: 1040px;
   margin: 24px auto 0;
   display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
+  grid-template-columns: minmax(240px, 0.72fr) minmax(320px, 1.28fr);
   gap: 28px;
   align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 30px;
+}
+
+.pitch-copy {
+  min-width: 0;
 }
 
 .pitch-box .section-label {
@@ -445,6 +454,16 @@ img.avatar {
   color: var(--muted);
 }
 
+.video-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--dark);
+}
+
 .video-frame iframe,
 .video-frame video {
   position: absolute;
@@ -457,6 +476,12 @@ img.avatar {
 
 .video-frame video {
   object-fit: contain;
+}
+
+@media (max-width: 980px) {
+  .pitch-box {
+    grid-template-columns: 1fr;
+  }
 }
 .ods-card strong {
   display: block;
