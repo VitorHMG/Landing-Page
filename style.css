@@ -226,6 +226,7 @@ img {
 .highlight-box,
 .ods-card,
 .demo-box,
+.pitch-box,
 .qr-card,
 .diagram,
 .card,
@@ -287,6 +288,7 @@ img {
 .highlight-box,
 .ods-card,
 .demo-box,
+.pitch-box,
 .qr-card,
 .diagram {
   padding: 30px;
@@ -422,6 +424,47 @@ img.avatar {
   margin: 12px 0 24px;
 }
 
+.pitch-box {
+  max-width: 1040px;
+  margin: 24px auto 0;
+  display: grid;
+  grid-template-columns: 0.72fr 1.28fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.pitch-box .section-label {
+  margin-bottom: 12px;
+}
+
+.pitch-box h3 {
+  margin-bottom: 10px;
+}
+
+.pitch-box p {
+  color: var(--muted);
+}
+
+.video-frame {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--dark);
+}
+
+.video-frame video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  object-fit: contain;
+  background: var(--dark);
+}
+
 .ods-card strong {
   display: block;
   font-size: 3rem;
@@ -486,7 +529,8 @@ img.avatar {
   .hero,
   .split,
   .cta-section,
-  .demo-box {
+  .demo-box,
+  .pitch-box {
     grid-template-columns: 1fr;
   }
 
