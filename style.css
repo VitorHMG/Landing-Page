@@ -218,11 +218,11 @@ img {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
-  padding: 0 7% 80px;
-  margin-top: -28px;
+  padding: 28px 7% 80px;
 }
 
 .metrics article,
+.github-card,
 .highlight-box,
 .ods-card,
 .demo-box,
@@ -250,6 +250,40 @@ img {
 .metrics span {
   color: var(--muted);
   font-weight: 700;
+}
+
+.github-section {
+  padding: 0 7%;
+  margin-top: 0;
+  margin-bottom: 28px;
+  position: relative;
+  z-index: 2;
+}
+
+.github-card {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 28px 30px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: center;
+  overflow: hidden;
+}
+
+.github-card h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  line-height: 1.1;
+}
+
+.github-card p {
+  color: var(--muted);
+}
+
+.github-btn {
+  justify-self: end;
+  white-space: nowrap;
 }
 
 .section {
@@ -428,19 +462,9 @@ img.avatar {
   max-width: 1040px;
   margin: 24px auto 0;
   display: grid;
-  grid-template-columns: minmax(240px, 340px) minmax(320px, 680px);
+  grid-template-columns: 0.72fr 1.28fr;
   gap: 28px;
   align-items: center;
-  justify-content: center;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 30px;
-}
-
-.pitch-copy {
-  min-width: 0;
 }
 
 .pitch-box .section-label {
@@ -459,8 +483,6 @@ img.avatar {
   position: relative;
   overflow: hidden;
   width: 100%;
-  max-width: 680px;
-  justify-self: end;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -481,16 +503,6 @@ img.avatar {
   object-fit: contain;
 }
 
-@media (max-width: 980px) {
-  .pitch-box {
-    grid-template-columns: 1fr;
-  }
-
-  .video-frame {
-    max-width: none;
-    justify-self: stretch;
-  }
-}
 .ods-card strong {
   display: block;
   font-size: 3rem;
@@ -556,8 +568,13 @@ img.avatar {
   .split,
   .cta-section,
   .demo-box,
-  .pitch-box {
+  .pitch-box,
+  .github-card {
     grid-template-columns: 1fr;
+  }
+
+  .github-btn {
+    justify-self: start;
   }
 
   .metrics,
