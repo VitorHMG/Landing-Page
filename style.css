@@ -455,6 +455,9 @@ img.avatar {
   background: var(--dark);
 }
 
+.video-frame video {
+  object-fit: contain;
+}
 .ods-card strong {
   display: block;
   font-size: 3rem;
