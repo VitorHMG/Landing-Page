@@ -428,9 +428,10 @@ img.avatar {
   max-width: 1040px;
   margin: 24px auto 0;
   display: grid;
-  grid-template-columns: minmax(240px, 0.72fr) minmax(320px, 1.28fr);
+  grid-template-columns: minmax(240px, 340px) minmax(320px, 680px);
   gap: 28px;
   align-items: center;
+  justify-content: center;
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -458,6 +459,8 @@ img.avatar {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-width: 680px;
+  justify-self: end;
   aspect-ratio: 16 / 9;
   border-radius: 10px;
   border: 1px solid var(--border);
@@ -481,6 +484,11 @@ img.avatar {
 @media (max-width: 980px) {
   .pitch-box {
     grid-template-columns: 1fr;
+  }
+
+  .video-frame {
+    max-width: none;
+    justify-self: stretch;
   }
 }
 .ods-card strong {
